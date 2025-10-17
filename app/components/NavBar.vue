@@ -15,7 +15,7 @@
           <li><NuxtLink to="/characters/Story-DuncanSmokey" class="nav-link">Duncan's Story</NuxtLink></li>
           <li><NuxtLink to="/characters/Story-DanteWhite" class="nav-link">Dante's Story</NuxtLink></li>
           <li><NuxtLink to="/characters/Arthur" class="nav-link">Arthur "Ash"</NuxtLink></li>
-          <li><NuxtLink to="/characters/CharacterBio" class="nav-link">Character Dossier</NuxtLink></li>
+          <!-- <li><NuxtLink to="/characters/CharacterBio" class="nav-link">Character Dossier</NuxtLink></li> -->
           <li><NuxtLink to="/about" class="nav-link">About</NuxtLink></li>
         </ul>
 
