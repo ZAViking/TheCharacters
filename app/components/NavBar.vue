@@ -1,6 +1,6 @@
 <template>
     <nav>
-    <ul>
+    <ul class="NavLink">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/characters/DuncanSmokey">Duncan Smokey</NuxtLink></li>
         <li><NuxtLink to="/characters/DanteWhite">Dante White</NuxtLink></li>
@@ -12,21 +12,21 @@
 
 <style lang="css">
     nav {
-    background-color: #333;
-    padding: 1rem;
+        background-color: #333;
+        padding: 1rem;
     }
-    ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+    .NavLink {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
     }
     li a {
-    color: white;
-    text-decoration: none;
+        color: white;
+        text-decoration: none;
     }
     li a:hover {
-    text-decoration: underline;
+        text-decoration: underline;
     }
 </style>
