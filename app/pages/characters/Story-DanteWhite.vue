@@ -141,14 +141,14 @@
       </div>
     </div>
 
-    <!-- Navigation Controls -->
+    <!-- Update navigation controls -->
     <div class="book-navigation">
-    <NuxtLink to="/characters/Story-DuncanSmokey" class="nav-button prev-button">
-        ← Back to Duncan's Story
-    </NuxtLink>
-    <NuxtLink to="/characters/CharacterBio" class="nav-button next-button">
+      <NuxtLink to="/characters/DuncanSmokeyBio" class="nav-button prev-button">
+        ← Duncan's Bio
+      </NuxtLink>
+      <NuxtLink to="/characters/CharacterBio" class="nav-button next-button">
         Character Dossier →
-    </NuxtLink>
+      </NuxtLink>
     </div>
   </div>
 </template>

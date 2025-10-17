@@ -749,3 +749,116 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Add to assets/css/storybook.css */
+
+/* Enhanced Character Bio Styles */
+.character-header {
+  text-align: center;
+  margin: 2rem 0 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border-radius: 10px;
+  color: white;
+  border: 2px solid #d4af37;
+}
+
+.character-title h3 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  color: #f8e0a0;
+}
+
+.character-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #f8f1e5;
+  opacity: 0.9;
+}
+
+/* Enhanced Grid Items with Icons */
+.trait-item,
+.skill-item,
+.appearance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: #f8f1e5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.trait-item {
+  border-left: 4px solid #A0522D;
+}
+
+.skill-item {
+  border-left: 4px solid #d4af37;
+}
+
+.appearance-item {
+  border-left: 4px solid #8B4513;
+}
+
+.trait-item:hover,
+.skill-item:hover,
+.appearance-item:hover {
+  transform: translateX(5px);
+}
+
+.trait-item:hover {
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.skill-item:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.appearance-item:hover {
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.trait-icon,
+.skill-icon,
+.appearance-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Enhanced Quotes */
+.quotes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.quote-item {
+  position: relative;
+  padding: 2rem;
+  background: #f8f1e5;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 4rem;
+  color: #d4af37;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.quote-item p {
+  margin: 0;
+  color: #8B4513;
+  font-weight: 500;
+}
+

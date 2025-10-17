@@ -12,10 +12,27 @@
         <!-- Navigation Links -->
         <ul class="nav-links">
           <li><NuxtLink to="/" class="nav-link">Home</NuxtLink></li>
-          <li><NuxtLink to="/characters/Story-DuncanSmokey" class="nav-link">Duncan's Story</NuxtLink></li>
-          <li><NuxtLink to="/characters/Story-DanteWhite" class="nav-link">Dante's Story</NuxtLink></li>
+          
+          <!-- Duncan Dropdown -->
+          <li class="dropdown" @mouseenter="openDuncanDropdown" @mouseleave="closeDuncanDropdown">
+            <button class="nav-link dropdown-toggle">
+              Duncan Smokey ▾
+            </button>
+            <div class="dropdown-menu" :class="{ 'dropdown-open': isDuncanDropdownOpen }">
+              <NuxtLink to="/characters/Story-DuncanSmokey" class="dropdown-link" @click="closeAllDropdowns">
+                Duncan's Story
+              </NuxtLink>
+              <NuxtLink to="/characters/DuncanSmokeyBio" class="dropdown-link" @click="closeAllDropdowns">
+                Duncan's Bio
+              </NuxtLink>
+              <NuxtLink to="/characters/Story-DanteWhite" class="dropdown-link" @click="closeAllDropdowns">
+                Dante's Story
+              </NuxtLink>
+            </div>
+          </li>
+
           <li><NuxtLink to="/characters/Arthur" class="nav-link">Arthur "Ash"</NuxtLink></li>
-          <!-- <li><NuxtLink to="/characters/CharacterBio" class="nav-link">Character Dossier</NuxtLink></li> -->
+          <li><NuxtLink to="/characters/CharacterBio" class="nav-link">All Dossiers</NuxtLink></li>
           <li><NuxtLink to="/about" class="nav-link">About</NuxtLink></li>
         </ul>
 
@@ -30,10 +47,23 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu" :class="{ 'mobile-menu-open': isMobileMenuOpen }">
         <NuxtLink to="/" class="mobile-nav-link" @click="closeMobileMenu">Home</NuxtLink>
-        <NuxtLink to="/characters/Story-DuncanSmokey" class="mobile-nav-link" @click="closeMobileMenu">Duncan's Story</NuxtLink>
-        <NuxtLink to="/characters/Story-DanteWhite" class="mobile-nav-link" @click="closeMobileMenu">Dante's Story</NuxtLink>
+        
+        <!-- Mobile Duncan Section -->
+        <div class="mobile-section">
+          <div class="mobile-section-title">Duncan Smokey</div>
+          <NuxtLink to="/characters/Story-DuncanSmokey" class="mobile-nav-link indent" @click="closeMobileMenu">
+            Duncan's Story
+          </NuxtLink>
+          <NuxtLink to="/characters/DuncanSmokeyBio" class="mobile-nav-link indent" @click="closeMobileMenu">
+            Duncan's Bio
+          </NuxtLink>
+          <NuxtLink to="/characters/Story-DanteWhite" class="mobile-nav-link indent" @click="closeMobileMenu">
+            Dante's Story
+          </NuxtLink>
+        </div>
+
         <NuxtLink to="/characters/Arthur" class="mobile-nav-link" @click="closeMobileMenu">Arthur "Ash"</NuxtLink>
-        <NuxtLink to="/characters/CharacterBio" class="mobile-nav-link" @click="closeMobileMenu">Character Dossier</NuxtLink>
+        <NuxtLink to="/characters/CharacterBio" class="mobile-nav-link" @click="closeMobileMenu">All Dossiers</NuxtLink>
         <NuxtLink to="/about" class="mobile-nav-link" @click="closeMobileMenu">About</NuxtLink>
       </div>
     </nav>
@@ -41,6 +71,7 @@
 
 <script setup>
 const isMobileMenuOpen = ref(false);
+const isDuncanDropdownOpen = ref(false);
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
@@ -48,6 +79,18 @@ const toggleMobileMenu = () => {
 
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
+};
+
+const openDuncanDropdown = () => {
+  isDuncanDropdownOpen.value = true;
+};
+
+const closeDuncanDropdown = () => {
+  isDuncanDropdownOpen.value = false;
+};
+
+const closeAllDropdowns = () => {
+  isDuncanDropdownOpen.value = false;
 };
 </script>
 
@@ -119,6 +162,8 @@ const closeMobileMenu = () => {
   position: relative;
   border: 1px solid transparent;
   white-space: nowrap;
+  background: none;
+  cursor: pointer;
 }
 
 .nav-link:hover {
@@ -133,6 +178,60 @@ const closeMobileMenu = () => {
   background: rgba(212, 175, 55, 0.15);
   border-color: #d4af37;
   font-weight: bold;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2c1810;
+  border: 2px solid #d4af37;
+  border-radius: 0 0 8px 8px;
+  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #f8f1e5;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dropdown-link:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  padding-left: 1.2rem;
+}
+
+.dropdown-link:last-child {
+  border-bottom: none;
 }
 
 /* Mobile Menu Button */
@@ -186,6 +285,24 @@ const closeMobileMenu = () => {
   border-bottom: none;
 }
 
+.mobile-nav-link.indent {
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: #f8e0a0;
+}
+
+.mobile-section {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.mobile-section-title {
+  color: #d4af37;
+  font-weight: bold;
+  padding: 1rem 0 0.5rem 0;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .nav-links {
@@ -226,11 +343,11 @@ const closeMobileMenu = () => {
   }
 
   .logo-text {
-    display: none; /* Hide text on very small screens */
+    display: none;
   }
 
   .logo-link {
-    font-size: 1.5rem; /* Make book emoji larger */
+    font-size: 1.5rem;
   }
   
   .mobile-menu {

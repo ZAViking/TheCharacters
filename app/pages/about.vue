@@ -108,10 +108,10 @@
       </div>
     </div>
 
-    <!-- Navigation Controls -->
+    <!-- Update navigation controls -->
     <div class="book-navigation">
-      <NuxtLink to="/characters/CharacterBio" class="nav-button prev-button">
-        ← Character Dossier
+      <NuxtLink to="/characters/DuncanSmokeyBio" class="nav-button prev-button">
+        ← Duncan's Bio
       </NuxtLink>
       <NuxtLink to="/" class="nav-button next-button">
         Back to Home →

@@ -15,13 +15,13 @@
           <h1 class="chapter-title">Arthur "Ash" Corbin</h1>
           <h2 class="chapter-subtitle">The Filterless Philosopher-Thug</h2>
           
-          <!-- Navigation Tabs -->
-          <div class="story-parts">
-            <NuxtLink to="/characters/Story-Ash" class="story-part-link">
-              Ash's Story
+          <!-- Update navigation controls -->
+          <div class="book-navigation">
+            <NuxtLink to="/characters/CharacterBio" class="nav-button prev-button">
+              ← Character Dossier
             </NuxtLink>
-            <NuxtLink to="/characters/CharacterBio-Ash" class="story-part-link">
-              Character Dossier
+            <NuxtLink to="/characters/DuncanSmokeyBio" class="nav-button next-button">
+              Duncan's Bio →
             </NuxtLink>
           </div>
 

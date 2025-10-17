@@ -70,14 +70,14 @@
       </div>
     </div>
 
-    <!-- Navigation Controls -->
+    <!-- Update navigation controls -->
     <div class="book-navigation">
-    <NuxtLink to="/" class="nav-button prev-button">
+      <NuxtLink to="/" class="nav-button prev-button">
         ← Back to Home
-    </NuxtLink>
-    <NuxtLink to="/characters/Story-DanteWhite" class="nav-button next-button">
-        Continue as Dante White →
-    </NuxtLink>
+      </NuxtLink>
+      <NuxtLink to="/characters/DuncanSmokeyBio" class="nav-button next-button">
+        Duncan's Bio →
+      </NuxtLink>
     </div>
   </div>
 </template>

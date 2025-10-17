@@ -88,16 +88,16 @@
               </div>
             </div>
 
-            <!-- Quick Navigation -->
+            <!-- In your quick-nav section -->
             <div class="quick-nav">
               <NuxtLink to="/characters/Story-DuncanSmokey" class="nav-button large">
                 Begin Duncan's Story
               </NuxtLink>
-              <NuxtLink to="/characters/Story-DanteWhite" class="nav-button large outline">
-                Continue as Dante
-              </NuxtLink>
-              <NuxtLink to="/characters/CharacterBio" class="nav-button large outline">
+              <NuxtLink to="/characters/DuncanSmokeyBio" class="nav-button large outline">
                 Character Dossier
+              </NuxtLink>
+              <NuxtLink to="/characters/Arthur" class="nav-button large outline">
+                Meet Arthur "Ash"
               </NuxtLink>
             </div>
 
