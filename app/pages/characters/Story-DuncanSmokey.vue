@@ -1,21 +1,127 @@
 <template>
-    <!-- <div id="duncansmokeypart1" ref="part1"> -->
-    <div>
-      <h2>Duncan Smokey – The Ghost of the Old Family</h2>
-      <p>Born in the backstreets of Los Santos’ slums, **Duncan Smokey** never had the luxury of innocence. His father died overseas—a soldier who believed in honor and flags that never believed in him. His mother, left alone and broken, did what she had to do to keep them alive. It left Duncan with a bitter taste for the world and a lesson burned deep into his soul: *nobody saves you but yourself.*
-        As a boy, Duncan worked any job that paid. He shined shoes outside the docks, ran messages for drunks, and eventually, carried “packages” for men who didn’t ask questions. Those men were part of a local crime family—the **Marcellos**—a name whispered with both fear and respect. Duncan was just a street rat to them at first. But he watched. He learned. He listened. Every errand was a lesson. Every beating he saw was a reminder of what power looked like.
-        Over the years, he proved himself. Reliable. Quiet. Efficient. He didn’t talk too much; he *did*. The streets started calling him **Smokey**—because he appeared, handled business, and vanished before the dust settled. Soon enough, the Marcellos took notice.
-        They made him an associate, testing him with small-time collections and protection gigs. He excelled. When others hesitated, Duncan acted. When others panicked, Duncan kept calm. And after a few years, when he handled a bloody ambush single-handedly and protected one of the family’s capos, he was finally “made.”
-        He wasn’t just part of the life—he *was* the life.
-        But nothing gold ever stays.
-        The Don, **Antonio Marcello**, a man who treated Duncan like the son he never had, was ambushed one night. A meeting gone wrong. A setup. Duncan was supposed to be there—but fate had other plans. By the time he arrived, it was too late. Antonio was dead. The family fractured, the hierarchy crumbled, and old allies turned on each other like vultures.
-        Now, Duncan lives in the shadows of that broken empire. The family he built his life around is dust. The streets he bled for have forgotten his name. But he hasn’t forgotten **the one who pulled the trigger**. He’s chasing whispers, following blood trails, piecing together lies.
-        Each city he drifts through, each deal he takes, brings him closer to the truth—and to the man who stole his only father figure.
-        They say Duncan Smokey died when the Marcellos fell.
-        But the truth is—he’s just getting started.</p>
+  <div class="storybook-container">
+    <!-- Book Cover/Logo -->
+    <div class="book-cover">
+      <div class="book-logo">
+        📖
+        <span class="logo-text">The Smokey Chronicles</span>
+      </div>
     </div>
 
-    <!-- <div id="duncansmokeypart2" ref="part2"> -->
+    <!-- Story Content in Book Format -->
+    <div class="story-book">
+      <div class="book-page">
+        <div class="page-content">
+          <h1 class="chapter-title">Duncan Smokey</h1>
+          <h2 class="chapter-subtitle">The Ghost of the Old Family</h2>
+          
+          <div class="story-content">
+            <p class="first-letter">
+              Born in the backstreets of Los Santos' slums, <strong>Duncan Smokey</strong> never had the luxury of innocence. His father died overseas—a soldier who believed in honor and flags that never believed in him. His mother, left alone and broken, did what she had to do to keep them alive. It left Duncan with a bitter taste for the world and a lesson burned deep into his soul: "nobody saves you but yourself."
+            </p>
+
+            <p>
+              As a boy, Duncan worked any job that paid. He shined shoes outside the docks, ran messages for drunks, and eventually, carried "packages" for men who didn't ask questions. Those men were part of a local crime family—the <strong>Marcellos</strong> — a name whispered with both fear and respect. Duncan was just a street rat to them at first. But he watched. He learned. He listened. Every errand was a lesson. Every beating he saw was a reminder of what power looked like.
+            </p>
+
+            <p>
+              Over the years, he proved himself. Reliable. Quiet. Efficient. He didn't talk too much; he <strong>did</strong>. The streets started calling him <strong><u>Duncan Smokey</u></strong> — because he appeared, handled business, and vanished before the dust settled. Soon enough, the Marcellos took notice.
+            </p>
+
+            <p>
+              They made him an associate, testing him with small-time collections and protection gigs. He excelled. When others hesitated, Duncan acted. When others panicked, Duncan kept calm. And after a few years, when he handled a bloody ambush single-handedly and protected one of the family's capos, he was finally "made."
+            </p>
+
+            <p>
+              He wasn't just part of the life—he <em>was</em> the life.
+            </p>
+
+            <p class="centered-text">
+              ***
+            </p>
+
+            <p>
+              But nothing gold ever stays.
+            </p>
+
+            <p>
+              The Don, <strong><u>Antonio Marcello</u></strong>, a man who treated Duncan like the son he never had, was ambushed one night. A meeting gone wrong. A setup. Duncan was supposed to be there—but fate had other plans. By the time he arrived, it was too late. Antonio was dead. The family fractured, the hierarchy crumbled, and old allies turned on each other like vultures.
+            </p>
+
+            <p>
+              Now, Duncan lives in the shadows of that broken empire. The family he built his life around is dust. The streets he bled for have forgotten his name. But he hasn't forgotten <strong><u>the one who pulled the trigger</u></strong>. He's chasing whispers, following blood trails, piecing together lies.
+            </p>
+
+            <p>
+              Each city he drifts through, each deal he takes, brings him closer to the truth—and to the man who stole his only father figure.
+            </p>
+
+            <p class="centered-text">
+              ***
+            </p>
+
+            <p class="final-line">
+              They say Duncan Smokey died when the Marcellos fell.
+              <br>
+              But the truth is—he's just getting started.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="book-navigation">
+    <NuxtLink to="/" class="nav-button prev-button">
+        ← Back to Home
+    </NuxtLink>
+    <NuxtLink to="/characters/Story-DanteWhite" class="nav-button next-button">
+        Continue as Dante White →
+    </NuxtLink>
+    </div>
+  </div>
+</template>
+
+<!-- <template>
+    <!-- <div id="duncansmokeypart1" ref="part1">
+    <div>
+      <h2>Duncan Smokey – The Ghost of the Old Family</h2>
+        <p>
+            Born in the backstreets of Los Santos’ slums, <b>Duncan Smokey</b>> never had the luxury of innocence. His father died overseas—a soldier who believed in honor and flags that never believed in him. His mother, left alone and broken, did what she had to do to keep them alive. It left Duncan with a bitter taste for the world and a lesson burned deep into his soul: "nobody saves you but yourself."
+            <br>
+            <br>
+            As a boy, Duncan worked any job that paid. He shined shoes outside the docks, ran messages for drunks, and eventually, carried “packages” for men who didn’t ask questions. Those men were part of a local crime family—the <b>Marcellos</b> — a name whispered with both fear and respect. Duncan was just a street rat to them at first. But he watched. He learned. He listened. Every errand was a lesson. Every beating he saw was a reminder of what power looked like.
+            <br>
+            <br>
+            Over the years, he proved himself. Reliable. Quiet. Efficient. He didn’t talk too much; he <b>did</b>. The streets started calling him <b><u>Duncan Smokey</u></b> — because he appeared, handled business, and vanished before the dust settled. Soon enough, the Marcellos took notice.
+            <br>
+            <br>
+            They made him an associate, testing him with small-time collections and protection gigs. He excelled. When others hesitated, Duncan acted. When others panicked, Duncan kept calm. And after a few years, when he handled a bloody ambush single-handedly and protected one of the family’s capos, he was finally “made.”
+            <br>
+            <br>
+            He wasn’t just part of the life—he *was* the life.
+            <br>
+            <br>
+            But nothing gold ever stays.
+            <br>
+            <br>
+            The Don, <b><u>Antonio Marcello</u></b>, a man who treated Duncan like the son he never had, was ambushed one night. A meeting gone wrong. A setup. Duncan was supposed to be there—but fate had other plans. By the time he arrived, it was too late. Antonio was dead. The family fractured, the hierarchy crumbled, and old allies turned on each other like vultures.
+            <br>
+            <br>
+            Now, Duncan lives in the shadows of that broken empire. The family he built his life around is dust. The streets he bled for have forgotten his name. But he hasn’t forgotten <b><u>the one who pulled the trigger</u></b>. He’s chasing whispers, following blood trails, piecing together lies.
+            <br>
+            <br>
+            Each city he drifts through, each deal he takes, brings him closer to the truth—and to the man who stole his only father figure.
+            <br>
+            <br>
+            They say Duncan Smokey died when the Marcellos fell.
+            <br>
+            <br>
+            But the truth is—he’s just getting started.
+        </p>
+    </div>
+
+    <!-- <div id="duncansmokeypart2" ref="part2"> 
     <div>
         <h2>🕶️ Part II: The Bloodline of Shadows</h2>
         <P>
@@ -62,7 +168,7 @@
             He *is* the ghost — the shadow that keeps the underworld in balance.
         </P>
     </div>
-</template>
+</template> -->
 
 <!-- <script setup>
 const route = useRoute();
