@@ -1,5 +1,14 @@
 <template>
     <h1>Character Bio: Duncan “Smokey” Smokey</h1>
+    <ul class="StoryParts">
+        <li><NuxtLink to="/characters/Story-DuncanSmokey">Duncan Smokey - Story</NuxtLink></li>
+        <li><NuxtLink to="/characters/Story-DanteWhite">Dante White - Story</NuxtLink></li>
+        <!-- <li><NuxtLink to="/characters/Story-DuncanSmokey">Part 3</NuxtLink></li>
+        <li><NuxtLink to="/">Part 4</NuxtLink></li>
+        <li><NuxtLink to="/">Part 5</NuxtLink></li>
+        <li><NuxtLink to="/">Part 6</NuxtLink></li> -->
+    </ul>
+
     <h2>Basic Information</h2>
     <ul>
         <li>Full Name: Duncan Smokey</li>
@@ -46,3 +55,20 @@
         <li>“Antonio wasn’t my boss. He was my father. And someone’s gonna pay for taking him from me.”</li>
     </ul>
 </template>
+
+<style lang="css" scoped>
+    .StoryParts {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+    .StoryParts li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    .StoryParts li a:hover {
+        text-decoration: underline;
+    }
+</style>
