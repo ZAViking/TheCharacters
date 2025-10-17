@@ -14,6 +14,7 @@
           <li><NuxtLink to="/" class="nav-link">Home</NuxtLink></li>
           <li><NuxtLink to="/characters/Story-DuncanSmokey" class="nav-link">Duncan's Story</NuxtLink></li>
           <li><NuxtLink to="/characters/Story-DanteWhite" class="nav-link">Dante's Story</NuxtLink></li>
+          <li><NuxtLink to="/characters/Arthur" class="nav-link">Arthur "Ash"</NuxtLink></li>
           <li><NuxtLink to="/characters/CharacterBio" class="nav-link">Character Dossier</NuxtLink></li>
           <li><NuxtLink to="/about" class="nav-link">About</NuxtLink></li>
         </ul>
@@ -31,6 +32,7 @@
         <NuxtLink to="/" class="mobile-nav-link" @click="closeMobileMenu">Home</NuxtLink>
         <NuxtLink to="/characters/Story-DuncanSmokey" class="mobile-nav-link" @click="closeMobileMenu">Duncan's Story</NuxtLink>
         <NuxtLink to="/characters/Story-DanteWhite" class="mobile-nav-link" @click="closeMobileMenu">Dante's Story</NuxtLink>
+        <NuxtLink to="/characters/Arthur" class="mobile-nav-link" @click="closeMobileMenu">Arthur "Ash"</NuxtLink>
         <NuxtLink to="/characters/CharacterBio" class="mobile-nav-link" @click="closeMobileMenu">Character Dossier</NuxtLink>
         <NuxtLink to="/about" class="mobile-nav-link" @click="closeMobileMenu">About</NuxtLink>
       </div>
@@ -99,22 +101,24 @@ const closeMobileMenu = () => {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-link {
   color: #f8f1e5;
   text-decoration: none;
   font-family: 'Georgia', serif;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 5px;
   transition: all 0.3s ease;
   position: relative;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -183,6 +187,17 @@ const closeMobileMenu = () => {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-container {
     padding: 1rem;
@@ -217,6 +232,15 @@ const closeMobileMenu = () => {
   .logo-link {
     font-size: 1.5rem; /* Make book emoji larger */
   }
+  
+  .mobile-menu {
+    padding: 1rem;
+  }
+  
+  .mobile-nav-link {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
 }
 
 /* Active route indicator */
@@ -235,5 +259,18 @@ const closeMobileMenu = () => {
 .nav-link:hover::after,
 .nav-link.router-link-active::after {
   width: 80%;
+}
+
+/* Mobile menu button animation */
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 </style>
